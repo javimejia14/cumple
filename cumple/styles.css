@@ -1,0 +1,650 @@
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  background: linear-gradient(135deg, #ffeef8 0%, #e8f4fd 30%, #f0f8e8 60%, #fdf0e8 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Título principal */
+.main-header {
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.birthday-title {
+  font-size: 3.5rem;
+  color: #ff6b6b;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  animation: bounce 2s infinite;
+  margin-bottom: 1rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.sparkles {
+  font-size: 2rem;
+  animation: sparkle 1.5s infinite alternate;
+}
+
+/* Animaciones principales */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Collage de polaroids con carta central */
+.polaroid-collage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.polaroid {
+  position: absolute;
+  background: #fff;
+  padding: 15px 15px 50px 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: polaroidFloat 6s ease-in-out infinite;
+  width: fit-content; /* Añadir esta línea */
+  height: fit-content; /* Añadir esta línea */
+}
+
+.polaroid:hover {
+  transform: scale(1.05) !important;
+  z-index: 100 !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.polaroid-image {
+  width: 100%;
+  height: 180px; /* Altura fija para mantener consistencia */
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+}
+
+.polaroid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Tamaños específicos para cada polaroid */
+.polaroid-1 .polaroid-image {
+  width: 150px;
+  height: 180px;
+}
+
+.polaroid-2 .polaroid-image {
+  width: 140px;
+  height: 160px;
+}
+
+.polaroid-3 .polaroid-image {
+  width: 120px;
+  height: 140px;
+}
+
+.polaroid-4 .polaroid-image {
+  width: 140px;
+  height: 170px;
+}
+
+.polaroid-5 .polaroid-image {
+  width: 130px;
+  height: 150px;
+}
+
+.polaroid-6 .polaroid-image {
+  width: 135px;
+  height: 160px;
+}
+
+.polaroid-7 .polaroid-image {
+  width: 125px;
+  height: 140px;
+}
+
+.polaroid-8 .polaroid-image {
+  width: 130px;
+  height: 155px;
+}
+
+.polaroid-main .polaroid-image {
+  width: 170px;
+  height: 200px;
+}
+
+.polaroid-caption {
+  font-family: "Caveat", cursive;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  transform: rotate(-2deg);
+}
+
+.main-caption {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: #ff6b6b !important;
+  transform: rotate(-1deg) !important;
+}
+
+@keyframes polaroidFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Carta central */
+.letter-container {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border: 3px solid #ffd700;
+  position: relative;
+  transform: rotate(-1deg);
+  animation: letterFloat 6s ease-in-out infinite;
+}
+
+@keyframes letterFloat {
+  0%,
+  100% {
+    transform: rotate(-1deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(1deg) translateY(-10px);
+  }
+}
+
+.letter-header {
+  border-bottom: 2px solid #ff6b6b;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.letter-header h2 {
+  color: #ff6b6b;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.date {
+  color: #666;
+  font-style: italic;
+}
+
+.letter-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.signature {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.signature-name {
+  font-weight: bold;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  font-family: "Caveat", cursive;
+}
+
+.letter-decorations {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.decoration {
+  font-size: 1.5rem;
+  margin: 0 5px;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Posicionamiento específico de cada polaroid alrededor de la carta */
+.polaroid-1 {
+  top: 10%;
+  left: 5%;
+  transform: rotate(-15deg);
+  z-index: 8;
+  animation-delay: 0.5s;
+}
+
+.polaroid-2 {
+  top: 8%;
+  right: 8%;
+  transform: rotate(12deg);
+  z-index: 7;
+  animation-delay: 1s;
+}
+
+.polaroid-3 {
+  top: 35%;
+  left: 2%;
+  transform: rotate(-8deg);
+  z-index: 6;
+  animation-delay: 1.5s;
+}
+
+.polaroid-4 {
+  top: 30%;
+  right: 5%;
+  transform: rotate(18deg);
+  z-index: 9;
+  animation-delay: 2s;
+}
+
+.polaroid-5 {
+  bottom: 25%;
+  left: 8%;
+  transform: rotate(-20deg);
+  z-index: 5;
+  animation-delay: 2.5s;
+}
+
+.polaroid-6 {
+  bottom: 20%;
+  right: 10%;
+  transform: rotate(8deg);
+  z-index: 4;
+  animation-delay: 3s;
+}
+
+.polaroid-7 {
+  bottom: 8%;
+  left: 25%;
+  transform: rotate(-12deg);
+  z-index: 3;
+  animation-delay: 3.5s;
+}
+
+.polaroid-8 {
+  bottom: 12%;
+  right: 28%;
+  transform: rotate(15deg);
+  z-index: 2;
+  animation-delay: 4s;
+}
+
+/* Foto principal como polaroid adicional */
+.polaroid-main {
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg);
+  z-index: 10;
+  animation-delay: 0s;
+}
+
+/* Decoración de corazón */
+.heart-decoration {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  z-index: 15;
+}
+
+.heart {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+.heart-line {
+  color: #ff6b6b;
+}
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Globos flotantes */
+.balloons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.balloon {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: balloonFloat 6s ease-in-out infinite;
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100px;
+  background: #333;
+}
+
+.balloon-1 {
+  background: #ff6b6b;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.balloon-2 {
+  background: #4ecdc4;
+  top: 20%;
+  left: 80%;
+  animation-delay: 1s;
+}
+
+.balloon-3 {
+  background: #45b7d1;
+  top: 50%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+.balloon-4 {
+  background: #f9ca24;
+  top: 60%;
+  left: 85%;
+  animation-delay: 1.5s;
+}
+
+@keyframes balloonFloat {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-40px) translateX(-5px);
+  }
+  75% {
+    transform: translateY(-20px) translateX(15px);
+  }
+}
+
+/* Confeti */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ff6b6b;
+  animation: confettiFall 3s linear infinite;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Botón de celebración */
+.interactive-section {
+  text-align: center;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.celebration-btn {
+  background: linear-gradient(45deg, #ff6b6b, #ffd700);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+}
+
+.celebration-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.celebration-btn:active {
+  transform: translateY(-2px);
+}
+
+/* Responsivo mejorado */
+@media (max-width: 768px) {
+  .birthday-title {
+    font-size: 2.5rem;
+  }
+
+  .polaroid-collage {
+    min-height: auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .letter-container {
+    order: 1;
+    margin: 2rem 0;
+  }
+
+  .letter {
+    margin: 1rem;
+    padding: 2rem;
+    transform: rotate(0deg);
+    max-width: 90%;
+  }
+
+  .polaroid {
+    position: relative !important;
+    margin: 0.5rem;
+    transform: rotate(0deg) !important;
+    display: inline-block;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .polaroid-1,
+  .polaroid-2,
+  .polaroid-3,
+  .polaroid-4 {
+    order: 0;
+  }
+
+  .polaroid-5,
+  .polaroid-6,
+  .polaroid-7,
+  .polaroid-8,
+  .polaroid-main {
+    order: 2;
+  }
+
+  .heart-decoration {
+    position: relative;
+    order: 3;
+    margin: 2rem 0;
+  }
+
+  .balloons {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .polaroid-collage {
+    min-height: 90vh;
+  }
+
+  .letter {
+    max-width: 450px;
+    padding: 2rem;
+  }
+
+  /* Ajustar posiciones para tablets */
+  .polaroid-1 {
+    left: 8%;
+    top: 12%;
+  }
+
+  .polaroid-2 {
+    right: 12%;
+    top: 10%;
+  }
+
+  .polaroid-3 {
+    left: 5%;
+    top: 40%;
+  }
+
+  .polaroid-4 {
+    right: 8%;
+    top: 35%;
+  }
+
+  .polaroid-5 {
+    left: 12%;
+    bottom: 30%;
+  }
+
+  .polaroid-6 {
+    right: 15%;
+    bottom: 25%;
+  }
+}
+
+/* Efectos especiales para celebración */
+.celebration-active .birthday-title {
+  animation: celebrationBounce 0.5s ease-in-out 3;
+}
+
+.celebration-active .polaroid {
+  animation: celebrationSpin 1s ease-in-out;
+}
+
+@keyframes celebrationBounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes celebrationSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

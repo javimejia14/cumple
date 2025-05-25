@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Confeti animado -->
+    <div class="confetti-container" id="confetti-container"></div>
+    
+    <!-- Globos flotantes -->
+    <div class="balloons">
+        <div class="balloon balloon-1"></div>
+        <div class="balloon balloon-2"></div>
+        <div class="balloon balloon-3"></div>
+        <div class="balloon balloon-4"></div>
+    </div>
+
+    <!-- Título principal -->
+    <header class="main-header">
+        <h1 class="birthday-title">¡Feliz Cumpleaños Meu Bem!</h1>
+        <div class="sparkles">✨🎉✨</div>
+    </header>
+
+    <!-- Collage de fotos estilo polaroid con carta central -->
+    <div class="polaroid-collage">
+        <!-- Fotos polaroid distribuidas alrededor -->
+        <div class="polaroid polaroid-1">
+            <div class="polaroid-image">
+                <img src="/img/Fati-1.jpg" alt="Soñadora">
+            </div>
+        </div>
+
+        <div class="polaroid polaroid-2">
+            <div class="polaroid-image">
+                <img src="/img/Fati-2.jpg" alt="Te quiero">
+            </div>
+            <div class="polaroid-caption">Te amo</div>
+        </div>
+
+        <div class="polaroid polaroid-3">
+            <div class="polaroid-image">
+                <img src="/img/Nos.jpg" alt="Fecha especial">
+            </div>
+            <div class="polaroid-caption">7/2/2025</div>
+        </div>
+
+        <div class="polaroid polaroid-4">
+            <div class="polaroid-image">
+                <img src="/img/Fati-3.jpg" alt="Diversión">
+            </div>
+        </div>
+
+        <!-- Carta central -->
+        <div class="letter-container">
+            <div class="letter">
+                <div class="letter-header">
+                    <h2>Meu bem</h2>
+                    <div class="date">Fecha: 25 de Mayo</div>
+                </div>
+                
+                <div class="letter-content">
+                    <p>Olá meu bem ❤️. Quería desearte un feliz cumpleaños 🥳</p>
+                    
+                    <p>Y que Diosito te regale muchos años más de vida, para que podamos seguir viviendo lo nuestro. Agradezco mucho el día que te conocí, te amo inmensamente y eres una parte importante en mi vida.
+                    Gracias por todo lo que haces por mí, solo espero que algún día todo lo que deseamos se nos cumpla, quiero que siempre seas feliz y si es a mi lado mejor.
+                    </p>
+                    
+                    <p>¡Que disfrutes mucho tu día especial!</p>
+                    
+                    <div class="signature">
+                        <p>Con mucho amor,</p>
+                        <p class="signature-name">Javier</p>
+                    </div>
+                </div>
+                
+                <div class="letter-decorations">
+                    <span class="decoration">🎈</span>
+                    <span class="decoration">🎂</span>
+                    <span class="decoration">🎁</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Más fotos polaroid -->
+        <div class="polaroid polaroid-5">
+            <div class="polaroid-image">
+                <img src="/img/Fati-4.jpg" alt="Creativa">
+            </div>
+        </div>
+
+        <div class="polaroid polaroid-6">
+            <div class="polaroid-image">
+                <img src="/img/Mini-Fati.jpg" alt="Desde siempre">
+            </div>
+            <div class="polaroid-caption">desde 2003</div>
+        </div>
+
+        <div class="polaroid polaroid-7">
+            <div class="polaroid-image">
+                <img src="/img/Fati-5.jpg" alt="Aventuras">
+            </div>
+
+        </div>
+
+        <div class="polaroid polaroid-8">
+            <div class="polaroid-image">
+                <img src="/img/Fati-6.jpg" alt="Recuerdos">
+            </div>
+        </div>
+
+        <!-- Decoración de corazón -->
+        <div class="heart-decoration">
+            <span class="heart-line">━━━━━</span>
+            <span class="heart">♥</span>
+            <span class="heart-line">━━━━━</span>
+        </div>
+    </div>
+
+    <!-- Botón interactivo -->
+    <div class="interactive-section">
+        <button class="celebration-btn" onclick="startCelebration()">
+            ¡Celebrar! 🎉
+        </button>
+    </div>
+
+    <!-- Música de fondo (opcional) -->
+    <audio id="birthday-song" loop>
+        <source src="happy-birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
